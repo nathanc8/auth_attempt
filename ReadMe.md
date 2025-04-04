@@ -7,3 +7,5 @@ Librairies :
 - MySQL Driver
 - Spring Boot Starter
 - Json Web Token (3 librairies distinctes : jjwt-api, jjwt-impl, jjwt-jackson
+
+Java 17 & Maven 3.9.9
