@@ -9,11 +9,10 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping()
 public class AuthenticationController {
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -38,5 +37,11 @@ public class AuthenticationController {
         final String jwt = jwtUtil.generateToken(userDetails.getUsername());
 
         return new AuthenticationResponse(jwt);
+    }
+
+    @GetMapping("/test")
+    public String testMapping() {
+        System.out.println("ça marche");
+        return "ça marche";
     }
 }

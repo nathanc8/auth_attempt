@@ -33,5 +33,4 @@ public class User {
         this.role = role;
         this.enabled = enabled;
     }
-
 }
