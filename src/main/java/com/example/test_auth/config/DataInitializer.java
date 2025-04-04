@@ -1,8 +1,8 @@
-package com.example.test_auth.config; // Adaptez le package selon votre structure
+package com.example.test_auth.config;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.example.test_auth.model.User; // Adaptez le chemin selon votre structure
+import com.example.test_auth.model.User;
 import com.example.test_auth.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -22,7 +22,7 @@ public class DataInitializer implements CommandLineRunner {
         // Vérifier si l'utilisateur existe déjà
         if (userRepository.findByUsername("admin").isEmpty()) {
             User admin = new User(
-                    "admin",
+                    "admin1",
                     "admin@example.com",
                     passwordEncoder.encode("password"),
                     "ROLE_ADMIN", // Notez le préfixe ROLE_ qui est souvent nécessaire pour Spring Security

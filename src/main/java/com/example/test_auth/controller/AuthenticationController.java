@@ -23,6 +23,11 @@ public class AuthenticationController {
     @Autowired
     private JwtUtil jwtUtil;
 
+    @GetMapping("/")
+    public String root() {
+        return "Bienvenue sur l'API !";
+    }
+
     @PostMapping("/authenticate")
     public AuthenticationResponse createAuthenticationResponse(@RequestBody AuthenticationRequest authRequest) throws Exception {
         try {
@@ -41,7 +46,7 @@ public class AuthenticationController {
 
     @GetMapping("/test")
     public String testMapping() {
-        System.out.println("ça marche");
-        return "ça marche";
+        System.out.println();
+        return "ça marche toujours";
     }
 }
