@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 
 @Entity
 @Table(name = "users")
@@ -23,6 +25,10 @@ public class User {
     private String password;
     @Column(nullable = false)
     private String role;
+
+    private Date created_at;
+    private Date updated_at;
+    private Notifs notifications_preferences;
 
     private boolean enabled = true;
 
